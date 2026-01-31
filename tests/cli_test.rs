@@ -1,3 +1,5 @@
+#![cfg(feature = "cli")]
+
 use sx::cli::args::{Args, NetworkMode};
 
 #[test]
