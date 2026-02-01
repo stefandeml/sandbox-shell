@@ -1,3 +1,7 @@
+[workspace]
+members = [".", "file-guardian"]
+resolver = "2"
+
 [package]
 name = "sx"
 version = "0.2.8"

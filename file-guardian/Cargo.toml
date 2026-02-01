@@ -1,0 +1,30 @@
+[package]
+name = "file-guardian"
+version = "0.1.0"
+edition = "2021"
+description = "Sandboxed file system watcher and policy enforcer"
+
+[[bin]]
+name = "guardian"
+path = "src/launcher.rs"
+
+[[bin]]
+name = "guardian-worker"
+path = "src/worker.rs"
+
+[dependencies]
+sx = { path = "..", default-features = false }
+notify = "7"
+ignore = "0.4"
+infer = "0.16"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+toml = "0.9"
+anyhow = "1"
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter"] }
+chrono = { version = "0.4", features = ["serde"] }
+dirs = "6"
+
+[dev-dependencies]
+tempfile = "3"
